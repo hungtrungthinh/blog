@@ -8,6 +8,9 @@ class Role(models.Model):
     name = models.CharField(max_length=10)
     del_article = models.BooleanField()
     edit_article = models.BooleanField()
+    can_mange_role = models.BooleanField()
+    can_mange_user = models.BooleanField()
+    can_mange_article = models.BooleanField()
     date_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
